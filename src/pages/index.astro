@@ -1,9 +1,38 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Badge from '../components/Badge.astro';
+import Linkedin from '../components/icon/Linkedin.astro';
+import Github from '../components/icon/github.astro';
+import Hackerrank from '../components/icon/Hackerrank.astro';
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
+		<section class="w-full lg:w-[740px] mx-auto py-44">
+			<img class="rounded-full w-12 h-12 mb-4" src='../../src/Img/photo.jpg' alt="photo"/>
+		    <h1 class="text-white text-5xl font-bold flex flew-row gap-x-4 pb-10"><span class="text-purple-300/90">Hola!, soy Yamila </span><div class="flex justify-center items-center"><Badge>Diaponible para trabajar</Badge></div></h1>
+		    <h2 class="text-2xl text-wrap"><span class="text-purple-300/90">Desarroladora Web Full Stack</span><span class="text-white opacity-80">, de Buenos Aires, Argentina. Especializada en hacer aplicaciones únicas.</span></h2>
+		
+			<ul class="">
+			   <li>
+				<a
+				  href="https://www.linkedin.com/in/yamila-de-olivera/"
+				>
+				  <Linkedin />
+			    </>
+				<a
+				  href="https://www.hackerrank.com/yami40521?hr_r=1"
+				>
+				  <Hackerrank/>
+		        </>
+				<a
+				  href="https://github.com/yamilabelen98"
+				>
+				  <Github/>
+				</>
+			 </li>
+			</ul>
+		</section>
 	</main>	
 </Layout>
