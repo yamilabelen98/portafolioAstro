@@ -6,15 +6,18 @@ import Linkedin from '../components/icon/Linkedin.astro';
 import Github from '../components/icon/github.astro';
 import Hackerrank from '../components/icon/Hackerrank.astro';
 import Mail from '../components/icon/Mail.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import BriefCase from '../components/icon/BriefCase.astro';
+import Experience from '../components/Experience.astro';
 ---
 
 <Layout title="Portafolio de Yamila De Olivera - Desarrolladora y Programadora Web"
 description="Programadora apasionada por crear soluciones innovadoras y funcionales en la web, me dedico a transformar ideas en experiencias digitales atractivas y funcionales que brindan una excelente experiencia de usuario. Mi enfoque se centra en la atención al detalle y la mejora continua, buscando siempre aprender y crecer en el mundo del desarrollo web. Estoy emocionada por aportar mis conocimientos y entusiasmo a proyectos desafiantes y contribuir al éxito del equipo."
 >
-	<main>
-		<section class="w-full lg:w-[740px] mx-auto py-44">
+	<main class="px-4">
+		<SectionContainer class="py-16 md:py-36">
 			<img class="rounded-full w-12 h-12 mb-4" src='../../src/Img/photo.jpg' alt="photo"/>
-		    <h1 class="text-white text-5xl font-bold flex flew-row gap-x-4 pb-10"><span class="text-purple-300/90">Hola!, soy Yamila </span><div class="flex justify-center items-center"><Badge>Diaponible para trabajar</Badge></div></h1>
+		    <h1 class="text-white text-5xl font-bold flex flew-row gap-x-4 pb-10"><span class="text-purple-400">Hola!, soy Yamila </span><div class="flex justify-center items-center"><Badge>Diaponible para trabajar</Badge></div></h1>
 		    <h2 class="text-2xl text-wrap"><span class="text-purple-300/90">Desarroladora Web Full Stack</span><span class="text-white opacity-80">, de Buenos Aires, Argentina. Especializada en hacer aplicaciones únicas.</span></h2>
 		
 			<nav class="flex gap-x-2 mt-8">
@@ -47,6 +50,16 @@ description="Programadora apasionada por crear soluciones innovadoras y funciona
 				<a/>
 			 
 			</nav>
-		</section>
+		</SectionContainer>
+
+		<SectionContainer id="experiencia">
+			<h2
+			  class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-white/80 dark:text-black"
+			>
+			  <BriefCase class="size-8" />
+			  Experiencia laboral
+			</h2>
+			<Experience />
+		  </SectionContainer>
 	</main>	
 </Layout>
