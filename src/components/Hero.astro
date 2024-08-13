@@ -1,0 +1,54 @@
+---
+const personalImageAlt = "Yamila De Olivera"
+import Badge from "../components/Badge.astro"
+import LinkedInIcon from "../components/icon/Linkedin.astro"
+import MailIcon from "../components/icon/Mail.astro"
+import SocialPill from "../components/SocialPill.astro"
+import Arrow from "../components/icon/Arrow.astro"
+---
+
+<div class="max-w-xl">
+  <div class="flex gap-4 mb-4">
+    <span class="relative inline-flex items-center justify-center overflow-hidden rounded-full p-[2.5px]">
+      <span
+        class="absolute inset-0 animate-spin bg-[conic-gradient(from_90deg_at_50%_50%,#ff0000_0%,#00ffff_50%,#ff0000_100%)]
+dark:bg-[conic-gradient(from_90deg_at_50%_50%,#eb00bc_0%,#00d2ff_50%,#eb00bc_100%)]"
+      ></span>
+      <img
+        class="relative rounded-full shadow-lg w-16 h-16"
+        src="../../src/Img/photo.jpg"
+        alt="Yamila De Olivera"
+      />
+    </span>
+    <a
+      href='../../src/Img/CV YamilaDeOlivera.pdf'
+      target="_blank"
+      rel="noopener"
+      class="flex items-center transition md:justify-center md:hover:scale-105"
+    >
+      <Badge>Disponible para trabajar, CV<Arrow class="size-4"/></Badge>
+    </a>
+  </div>
+  <h1
+    class="text-4xl font-bold tracking-tight text-white sm:text-5xl dark:text-black"
+  >
+  Hola!, soy Yamila
+  </h1>
+  <p
+    class="mt-6 text-xl text-white dark:[&>strong]:text-purple-400 [&>strong]:text-[#a10684] [&>strong]:font-semibold dark:text-gray-300"
+  >
+  En busca de oportunidades para desepeñar mi experiencia aprendida. <strong
+      >Desarroladora Web Full Stack</strong
+    > , de Buenos Aires, Argentina. Especializada en hacer sitios web únicos.
+  </p>
+  <nav class="flex flex-wrap gap-4 mt-8">
+    <SocialPill href="mailto:yami40521@gmail.com">
+      <MailIcon class="size-4" />
+      Contáctame
+    </SocialPill>
+    <SocialPill href="https://www.linkedin.com/in/yamila-de-olivera/">
+      <LinkedInIcon class="size-4" />
+      LinkedIn
+    </SocialPill>
+  </nav>
+</div>

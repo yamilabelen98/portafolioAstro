@@ -1,65 +1,56 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Badge from '../components/Badge.astro';
-import Linkedin from '../components/icon/Linkedin.astro';
-import Github from '../components/icon/github.astro';
-import Hackerrank from '../components/icon/Hackerrank.astro';
-import Mail from '../components/icon/Mail.astro';
-import SectionContainer from '../components/SectionContainer.astro';
-import BriefCase from '../components/icon/BriefCase.astro';
-import Experience from '../components/Experience.astro';
+import Layout from "../layouts/Layout.astro"
+
+import AboutMe from "../components/AboutMe.astro"
+import Briefcase from "../components/icon/BriefCase.astro"
+import CodeIcon from "../components/icon/Code.astro"
+import Experience from "../components/Experience.astro"
+import ProfileCheck from "../components/icon/ProfileCheck.astro"
+import Projects from "../components/Projects.astro"
+import SectionContainer from "../components/SectionContainer.astro"
+import Hero from "../components/Hero.astro"
 ---
 
-<Layout title="Portafolio de Yamila De Olivera - Desarrolladora y Programadora Web"
+<Layout 
+title="Portafolio de Yamila De Olivera - Desarrolladora y Programadora Web"
 description="Programadora apasionada por crear soluciones innovadoras y funcionales en la web, me dedico a transformar ideas en experiencias digitales atractivas y funcionales que brindan una excelente experiencia de usuario. Mi enfoque se centra en la atención al detalle y la mejora continua, buscando siempre aprender y crecer en el mundo del desarrollo web. Estoy emocionada por aportar mis conocimientos y entusiasmo a proyectos desafiantes y contribuir al éxito del equipo."
 >
-	<main class="px-4">
-		<SectionContainer class="py-16 md:py-36">
-			<img class="rounded-full w-12 h-12 mb-4" src='../../src/Img/photo.jpg' alt="photo"/>
-		    <h1 class="text-white text-5xl font-bold flex flew-row gap-x-4 pb-10"><span class="text-purple-400">Hola!, soy Yamila </span><div class="flex justify-center items-center"><Badge>Diaponible para trabajar</Badge></div></h1>
-		    <h2 class="text-2xl text-wrap"><span class="text-purple-300/90">Desarroladora Web Full Stack</span><span class="text-white opacity-80">, de Buenos Aires, Argentina. Especializada en hacer aplicaciones únicas.</span></h2>
-		
-			<nav class="flex gap-x-2 mt-8">
-			   
-				<a
-				class="rounded-full border border-purple-500 bg-white/5 hover:scale-110 hover:bg-purple-500 transition flex justify-center items-center gap-x-2 py-0 px-2"
-				  href="https://www.linkedin.com/in/yamila-de-olivera/"
-				>
-				  <Linkedin class="w-6 h-5"/>
-			    <a/>
-				<a
-				class="rounded-full border border-purple-500 bg-white/5 hover:scale-110 hover:bg-purple-500 transition flex justify-center items-center gap-x-2 py-0 px-1"
-				  href="https://www.hackerrank.com/yami40521?hr_r=1"
-				>
-				  <Hackerrank class="w-8 h-10"/>
-		        <a/>
-				<a
-				class="rounded-full border border-purple-500 bg-white/5 hover:scale-110 hover:bg-purple-500 transition flex justify-center items-center gap-x-2 py-0 px-2"
-				  href="https://github.com/yamilabelen98"
-				>
-				  <Github class="w-6 h-6"/>
-				<a/>
+  <main class="px-4">
+    <SectionContainer class="py-16 md:py-36">
+      <Hero>
+      </slot>
+    </Hero>
+    </SectionContainer>
+    <div class="space-y-24">
+    <SectionContainer id="experiencia">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black dark:text-white"
+      >
+        <Briefcase class="size-8" />
+        Experiencia laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
 
-				<a
-				class="rounded-full border border-purple-500 bg-white/5 hover:scale-110 hover:bg-purple-500 transition text-white flex justify-center items-center gap-x-2 py-0 px-2"
-				  href="https://github.com/yamilabelen98"
-				>
-				  <Mail class="w-6 h-6"/>
-				  yami40521@gmail.com
-				<a/>
-			 
-			</nav>
-		</SectionContainer>
+    <SectionContainer id="proyectos">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black dark:text-white"
+      >
+        <CodeIcon class="size-7" />
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
 
-		<SectionContainer id="experiencia">
-			<h2
-			  class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-white/80 dark:text-black"
-			>
-			  <BriefCase class="size-8" />
-			  Experiencia laboral
-			</h2>
-			<Experience />
-		  </SectionContainer>
-	</main>	
+    <SectionContainer id="sobre-mi">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black dark:text-white"
+      >
+        <ProfileCheck class="size-8" />
+        Sobre mí
+      </h2>
+      <AboutMe />
+    </SectionContainer>
+  </div>
+  </main>
 </Layout>

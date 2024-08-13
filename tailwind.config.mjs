@@ -3,7 +3,12 @@ export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	darkMode:'class',
 	theme: {
-		extend: {},
+		extend: {
+			colors: {
+				'icon-light': '#000000', // Color del ícono en modo claro
+				'icon-dark': '#ffffff',  // Color del ícono en modo oscuro
+			  },
+		},
 	},
 	plugins: [],
 }

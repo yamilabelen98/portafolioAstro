@@ -1,47 +1,52 @@
 ---
 import '@fontsource/kalam';
-import Header from '../components/Header.astro';
+import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
+import { ViewTransitions } from "astro:transitions"
 
 interface Props {
-	title: string;
-	description: string;
+  title: string
+  description: string
 }
 
-const { description, title } = Astro.props;
+const { description, title } = Astro.props
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<div class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(255,0,182,.20),rgba(255,255,255,0))]"></div>
-		<Header/>
-		<slot />
-	</body>
-</html>
-<style is:global>
-	:root {
-        color-scheme:light dark ;
-	}
-	html {
-		font-family: 'Kalam', cursive, system-ui, sans-serif;
-		scroll-behavior:smooth;
-	}
-	body{
-		display: flex;
-		flex-direction: column;
-		background: #050505;
-		min-height: 100vh;
-		
-	}
-	@media (prefers-reduced-motion: reduce) {
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+
+  <body class="relative text-black bg-neutral-50 bg-[radial-gradient(ellipse_80%80%_at_50%-20%,rgba(255,0,0,.40),rgba(255,105,180,.20))]
+ dark:text-white dark:bg-neutral-950 dark:bg-[radial-gradient(ellipse_80%80%_at_50%-20%,rgba(255,0,182,.20),rgba(255,255,255,0))]">
+    <Header />
+    <slot />
+    <Footer />
+    <style is:global>
+      :root {
+        color-scheme: light dark;
+      }
+
+      html {
+        font-family: 'Kalam', cursive, system-ui, sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      body {  
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        overscroll-behavior: none;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
         html {
           scroll-behavior: auto;
         }
@@ -98,4 +103,6 @@ const { description, title } = Astro.props;
           }
         }
       }
-</style>
+    </style>
+  </body>
+</html>

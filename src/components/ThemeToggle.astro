@@ -1,0 +1,134 @@
+---
+import SunIcon from "../components/icon/Sun.astro";
+import MoonIcon from "../components/icon/Moon.astro";
+import SystemIcon from "../components/icon/System.astro";
+
+const THEMES = ["Light", "Dark", "System"];
+---
+
+<div class="relative ml-1 mr-1">
+  <button
+    id="theme-toggle-btn"
+    class="appearance-none border-none flex items-center p-2 bg-gray-200 dark:bg-gray-800 rounded-full shadow-md hover:scale-105 transition"
+  >
+    <span class="sr-only">Elige el tema</span>
+    <div class="flex items-center">
+      <SunIcon id="light" class="theme-toggle-icon size-5 transition-all" />
+      <MoonIcon id="dark" class="theme-toggle-icon size-5 transition-all" />
+      <SystemIcon id="system" class="theme-toggle-icon size-5 transition-all" />
+    </div>
+    <div class="relative ml-3">
+      <input
+        type="checkbox"
+        id="theme-switch"
+        class="hidden"
+      />
+      <label
+        htmlFor="theme-switch"
+        class="flex items-center cursor-pointer"
+      >
+        <div class="block w-10 h-5 bg-gray-400 dark:bg-gray-600 rounded-full relative">
+          <div
+            class="absolute top-0 left-0 w-5 h-5 bg-white rounded-full transition-transform"
+            id="switch-knob"
+          ></div>
+        </div>
+      </label>
+    </div>
+  </button>
+</div>
+
+<style>
+  #switch-knob {
+    transform: translateX(0);
+  }
+
+  #theme-switch:checked + label #switch-knob {
+    transform: translateX(100%);
+  }
+
+  .theme-toggle-icon {
+    display: none;
+  }
+
+  .theme-toggle-icon#light {
+    display: block;
+  }
+
+  #theme-switch[data-theme="dark"] ~ .theme-toggle-icon#dark {
+    display: block;
+  }
+
+  #theme-switch[data-theme="system"] ~ .theme-toggle-icon#system {
+    display: block;
+  }
+</style>
+
+<script is:inline>
+  let remove = null;
+  const matchMedia = window.matchMedia("(prefers-color-scheme: dark)");
+  const switchKnob = document.getElementById("switch-knob");
+  const themeSwitch = document.getElementById("theme-switch");
+  const themeToggleBtn = document.getElementById("theme-toggle-btn");
+
+  const getThemePreference = () => {
+    if (typeof localStorage !== "undefined") {
+      return localStorage.getItem("theme") ?? "system";
+    }
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
+  };
+
+  const updateIcon = (themePreference) => {
+    document.querySelectorAll(".theme-toggle-icon").forEach((element) => {
+      element.style.display = element.id === themePreference ? "block" : "none";
+    });
+  };
+
+  const updateTheme = () => {
+    if (remove != null) {
+      remove();
+    }
+    matchMedia.addEventListener("change", updateTheme);
+    remove = () => {
+      matchMedia.removeEventListener("change", updateTheme);
+    };
+
+    const themePreference = getThemePreference();
+    const isDark =
+      themePreference === "dark" ||
+      (themePreference === "system" && matchMedia.matches);
+
+    updateIcon(themePreference);
+    document.documentElement.classList[isDark ? "add" : "remove"]("dark");
+
+    // Update the switch position
+    themeSwitch.checked = themePreference === "dark";
+    themeSwitch.dataset.theme = themePreference;
+    switchKnob.style.transform = themePreference === "dark" ? "translateX(100%)" : "translateX(0%)";
+  };
+
+  updateTheme();
+
+  themeToggleBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const currentTheme = getThemePreference();
+    let newTheme;
+    if (currentTheme === "light") {
+      newTheme = "dark";
+    } else if (currentTheme === "dark") {
+      newTheme = "system";
+    } else {
+      newTheme = "light";
+    }
+    localStorage.setItem("theme", newTheme);
+    updateTheme();
+  });
+
+  themeSwitch.addEventListener("change", () => {
+    const newTheme = themeSwitch.checked ? "dark" : "light";
+    localStorage.setItem("theme", newTheme);
+    updateTheme();
+  });
+</script>

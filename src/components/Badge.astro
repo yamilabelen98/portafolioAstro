@@ -1,3 +1,11 @@
-<span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-  <slot/>
-</span>
+<div class="flex items-center ">
+  <span class="relative inline-flex overflow-hidden rounded-full p-[2px]">
+    <span
+      class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#ff0000_0%,#00ffff_50%,#ff0000_100%)]
+ dark:bg-[conic-gradient(from_90deg_at_50%_50%,#eb00bc_0%,#009954_50%,#eb00bc_100%)]"
+    ></span>
+    <div class="inline-flex items-center justify-center w-full px-3 py-1 text-sm text-black bg-pink rounded-full cursor-pointer dark:bg-purple dark:text-white backdrop-blur-3xl whitespace-nowrap">
+      <slot />
+    </div>
+  </span>
+  </div>
