@@ -1,39 +1,51 @@
 ---
 import GitHub from "./icon/Github.astro"
-import NextJS from "./icon/NextJS.astro"
-import Tailwind from "./icon/Tailwind.astro"
+import JS from "./icon/JS.astro"
+import CSS from "./icon/CSS.astro"
+import Node from "./icon/Node.astro"
+import ExpressJS from "./icon/Express.astro"
 import Link from "./icon/Link.astro"
 import LinkButton from "./LinkButton.astro"
 
 const TAGS = {
-  NEXT: {
-    name: "Next.js",
-    class: "bg-black text-white",
-    icon: NextJS,
+  JS: {
+    name: "JavaScript",
+    class: "bg-yellow-500 text-white",
+    icon: JS,
   },
-  TAILWIND: {
-    name: "Tailwind CSS",
+  CSS: {
+    name: "CSS",
     class: "bg-[#003159] text-white",
-    icon: Tailwind,
+    icon: CSS,
+  },
+  NodeJS: {
+    name: "NodeJS",
+    class: "bg-green-700 text-white",
+    icon: Node,
+  },
+  ExpressJS: {
+    name: "ExpressJS",
+    class: "bg-gray-700 text-white",
+    icon: ExpressJS,
   },
 }
 const PROJECTS = [
+  // {
+  //   title: "Proyecto Grupal Morfi",
+  //   description:
+  //     "Desarollador Full Stack para proyecto grupal Morfi, que consistio en desarrollar una single-page application destinada a la publicacion de restaurantes y ventas de productos.",
+  //   link: "https://svgl.vercel.app/",
+  //   github: "https://github.com/pheralb/svgl",
+  //   image: "/src/Img/videogame.webp",
+  //   tags: [TAGS.JS, TAGS.CSS],
+  // },
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title: "Proyecto Individual VideoGame - con JavaScript",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
-  },
-  {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
-    description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Desarollo de single-page application interactiva, con tematica de VideoJuegos. Utilizando React para el Front End y Redux para el manejo de estados. La parte visual fue desarrollada utilizando CSS puro y sin ayuda de librerías externas. El back end fue desarrollado con la ayuda de una API que envía la información a través del mismo y codificado con NodeJS y con la ayuda de ExpressJS. A su vez, extendi funcionalidades a la API original, tales como el creado de nuevos personajes.",
+    github: "https://github.com/yamilabelen98/Proyecto-Individual-VideoGame",
+    image: "/src/Img/videogame.webp",
+    tags: [TAGS.JS, TAGS.CSS, TAGS.ExpressJS, TAGS.NodeJS],
   },
 ]
 ---
