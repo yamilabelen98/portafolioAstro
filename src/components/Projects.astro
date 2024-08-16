@@ -15,7 +15,7 @@ const TAGS = {
   },
   CSS: {
     name: "CSS",
-    class: "bg-[#003159] text-white",
+    class: "bg-blue-900 text-white",
     icon: CSS,
   },
   NodeJS: {
@@ -25,7 +25,7 @@ const TAGS = {
   },
   ExpressJS: {
     name: "ExpressJS",
-    class: "bg-gray-700 text-white",
+    class: "bg-gray-500 text-white",
     icon: ExpressJS,
   },
 }
@@ -42,7 +42,7 @@ const PROJECTS = [
   {
     title: "Proyecto Individual VideoGame - con JavaScript",
     description:
-      "Desarollo de single-page application interactiva, con tematica de VideoJuegos. Utilizando React para el Front End y Redux para el manejo de estados. La parte visual fue desarrollada utilizando CSS puro y sin ayuda de librerías externas. El back end fue desarrollado con la ayuda de una API que envía la información a través del mismo y codificado con NodeJS y con la ayuda de ExpressJS. A su vez, extendi funcionalidades a la API original, tales como el creado de nuevos personajes.",
+      "Desarollo de single-page application interactiva, con temática de VideoJuegos. Utilizando React para el Front-End y Redux para el manejo de estados. La parte visual fue desarrollada utilizando CSS puro y sin ayuda de librerías externas. El Back-end fue desarrollado con la ayuda de una API que envía la información a través del mismo y codificado con NodeJS y con la ayuda de ExpressJS. A su vez, extendÍ funcionalidades a la API original, tales como el creado de nuevos personajes.",
     github: "https://github.com/yamilabelen98/Proyecto-Individual-VideoGame",
     image: "/Img/videogame.webp",
     tags: [TAGS.JS, TAGS.CSS, TAGS.ExpressJS, TAGS.NodeJS],
@@ -55,7 +55,7 @@ const PROJECTS = [
     PROJECTS.map(({ image, title, description, tags, github }) => (
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
-    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl border-2 lg:border-3 lg:border-[#ed6195] lg:hover:border-[#ed6195]lg:hover:bg-[#f5b7cd] ">
       <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
     </div>
   </div>

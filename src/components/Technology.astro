@@ -1,0 +1,104 @@
+---
+import SectionTitle from './SectionTitle.astro'
+import HTMLIcon from './icon/Html.astro'
+import CSSIcon from './icon/CSS.astro'
+import JavaScriptIcon from './icon/JS.astro'
+import ReactIcon from './icon/React.astro'
+import TailwindIcon from './icon/Tailwind.astro'
+import FigmaIcon from './icon/Figma.astro'
+import NodeJSIcon from './icon/Node.astro'
+import ExpressIcon from './icon/Express.astro'
+import MongoDBIcon from './icon/MongoDB.astro'
+import PostgreSQLIcon from './icon/PostgreSQL.astro'
+import FirebaseIcon from './icon/Firebase.astro'
+import AstroIcon from './icon/AstroIcon.astro'
+import ExpoIcon from './icon/Expo.astro'
+import TypeScriptIcon from './icon/TypeScript.astro'
+import GitIcon from './icon/Git.astro'
+import GitHubIcon from './icon/Hub.astro'
+import PostmanIcon from './icon/Postman.astro'
+import VSCodeIcon from './icon/VSCode.astro'
+import NpmIcon from './icon/Npm.astro'
+
+const MY_STACK = {
+  frontend: [
+    { name: 'HTML', icon: HTMLIcon },
+    { name: 'CSS', icon: CSSIcon },
+    { name: 'JavaScript', icon: JavaScriptIcon },
+    { name: 'ReactJS', icon: ReactIcon },
+    { name: 'Tailwind', icon: TailwindIcon },
+    { name: 'Figma', icon: FigmaIcon },
+  ],
+  backend: [
+    { name: 'NodeJS', icon: NodeJSIcon },
+    { name: 'ExpressJS', icon: ExpressIcon },
+    { name: 'MongoDB', icon: MongoDBIcon },
+    { name: 'PostgreSQL', icon: PostgreSQLIcon },
+    { name: 'Firebase', icon: FirebaseIcon },
+  ],
+  learning: [
+    { name: 'Astro', icon: AstroIcon },
+    { name: 'Expo - React Native', icon: ExpoIcon },
+    { name: 'TypeScript', icon: TypeScriptIcon },
+  ],
+  tools: [
+    { name: 'Git', icon: GitIcon },
+    { name: 'Github', icon: GitHubIcon },
+    { name: 'Postman', icon: PostmanIcon },
+    { name: 'VSCode', icon: VSCodeIcon },
+    { name: 'NPM', icon: NpmIcon },
+  ],
+}
+
+const STACK_SECTIONS = [
+  {
+    title: "Frontend",
+    items: MY_STACK.frontend,
+    gradientClass: "from-[#f7c7d8] to-[#ed6195] dark:from-[#ffd1dc] dark:to-[#ff69b4]"
+  },
+  {
+    title: "Backend",
+    items: MY_STACK.backend,
+    gradientClass: "from-[#43a047] to-[#2e7d32] dark:from-[#c8e6c9] dark:to-[#66bb6a]"
+  },
+  {
+    title: "Aprendiendo",
+    items: MY_STACK.learning,
+    gradientClass: "from-[#fff176] to-[#ffd54f] dark:from-[#fff9c4] dark:to-[#ffeb3b]"
+  },
+  {
+    title: "Herramientas",
+    items: MY_STACK.tools,
+    gradientClass: "from-[#00d2ff] to-[#29b6f6] dark:from-[#b3e5fc] dark:to-[#4fc3f7]"
+  },
+]
+---
+<SectionTitle label="Tecnologías" />
+<p class="my-6 md:text-lg max-w-[740px] text-black dark:text-gray-100">
+    En mi viaje por el
+    <span>mundo del desarrollo</span>, he cultivado
+    <span class="text-[#ed6195] dark:text-[#eb00bc]">experiencia y habilidades</span>
+    en una variedad de tecnologías.
+    <span>Mi stack tecnológico incluye</span>:
+  </p>
+<section class="flex item-center justify-center mt-4">
+  
+  
+  <div class="grid lg:grid-cols-2 lg:grid-rows-2 gap-6 lg:place-content-center">
+    {STACK_SECTIONS.map((section, index) => (
+      <div class={`bg-[#f5b7cd] dark:bg-gray-700 rounded-lg shadow-lg p-6 ${index % 2 !== 0 ? 'lg:translate-y-4' : ''}`}>
+        <h3 class={`text-center mb-8 text-xl font-bold lg:text-4xl lg:break-words bg-gradient-to-t ${section.gradientClass} bg-clip-text text-transparent`}>
+          {section.title}
+        </h3>
+        <ul class="grid grid-cols-3 gap-4">
+          {section.items.map((skill) => (
+            <li class="rounded-2xl group flex flex-col justify-center items-center">
+              <skill.icon class="size-12 mb-2" />
+              <span class="text-sm w-full text-center font-semibold">{skill.name}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+</section>
