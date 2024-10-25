@@ -4,6 +4,7 @@ import GitHub from "./icon/Hub.astro"
 import JS from "./icon/JS.astro"
 import CSS from "./icon/CSS.astro"
 import Node from "./icon/Node.astro"
+import Python from "./icon/Python.astro"
 import ExpressJS from "./icon/Express.astro"
 import LinkButton from "./LinkButton.astro"
 
@@ -28,8 +29,21 @@ const TAGS = {
     class: "bg-gray-500 text-white",
     icon: ExpressJS,
   },
+  Python: {
+    name: "Python",
+    class: "bg-gray-500 text-white",
+    icon: Python,
+  },
 }
 const PROJECTS = [
+{
+    title: "Tetris Game",
+    description:
+      "Desarollado en Python utilizando la biblioteca Pygame. Las piezas caen y puedes controlar su movimiento y rotación. Además, incluye música de fondo, funciones de pausa y control de volumen, y una pantalla de Game Over cuando pierdes.",
+    github: "https://github.com/yamilabelen98/GAME_TETRIS",
+    image: "/Img/videogame.webp",
+    tags: [TAGS.Python],
+  },
   {
     title: "Proyecto Bot Discord",
     description:
