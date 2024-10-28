@@ -6,13 +6,38 @@ import CSS from "./icon/CSS.astro"
 import Node from "./icon/Node.astro"
 import Python from "./icon/Python.astro"
 import ExpressJS from "./icon/Express.astro"
+import Tailwind from "./icon/Tailwind.astro"
+import React from "./icon/React.astro"
+import NextJS from "./icon/NextJS.astro"
+import Supabase from "./icon/Supabase.astro"
+import Typescript from "./icon/TypeScript.astro"
 import LinkButton from "./LinkButton.astro"
 
 const TAGS = {
   JS: {
     name: "JavaScript",
-    class: "bg-yellow-500 text-white",
+    class: "bg-blue-500 text-white",
     icon: JS,
+  },
+  Supabase: {
+    name: "Supabase",
+    class: "bg-green-200 text-green-700",
+    icon: Supabase,
+  },
+  NextJS: {
+    name: "NextJS",
+    class: "bg-gray-500 text-white",
+    icon: NextJS,
+  },
+  Typescript: {
+    name: "Typescript",
+    class: "bg-blue-700 text-white",
+    icon: Typescript,
+  },
+  React: {
+    name: "React",
+    class: "bg-blue-500 text-white",
+    icon: React,
   },
   CSS: {
     name: "CSS",
@@ -31,11 +56,24 @@ const TAGS = {
   },
   Python: {
     name: "Python",
-    class: "bg-gray-500 text-white",
+    class: "bg-yellow-600 text-white",
     icon: Python,
+  },
+  TailwindCSS: {
+    name: "TailwindCSS",
+    class: "bg-gray-200 text-black",
+    icon: Tailwind,
   },
 }
 const PROJECTS = [
+{
+    title: "Clon X",
+    description:
+      "Permite a los usuarios iniciar sesión, publicar tweets, ver su feed y gestionar su perfil. Cuenta con autenticación con GitHub: Inicia sesión fácilmente usando tu cuenta de GitHub. Gestión de sesión: Cierra sesión cuando lo desees. Perfil de usuario: Visualiza tu información de perfil, incluyendo: nombre de usuario, nombre completo y avatar. Feed de tweets: Ve tus tweets. Publicación de tweets: Crea y publica nuevos tweets.",
+    github: "https://github.com/yamilabelen98/Clon-X",
+    image: "/Img/clon_x.jpeg",
+    tags: [TAGS.Typescript, TAGS.TailwindCSS, TAGS.React, TAGS.NextJS, TAGS.Supabase],
+  },
 {
     title: "Tetris Game",
     description:
