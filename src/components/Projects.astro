@@ -11,9 +11,21 @@ import React from "./icon/React.astro"
 import NextJS from "./icon/NextJS.astro"
 import Supabase from "./icon/Supabase.astro"
 import Typescript from "./icon/TypeScript.astro"
+import HTML from "./icon/Html.astro"
+import Django from "./icon/Django.astro"
 import LinkButton from "./LinkButton.astro"
 
 const TAGS = {
+  Django: {
+    name: "Django",
+    class: "bg-gray-500 text-white",
+    icon: Django,
+  },
+  HTML: {
+    name: "HTML",
+    class: "bg-orange-400 text-white",
+    icon: HTML,
+  },
   JS: {
     name: "JavaScript",
     class: "bg-blue-500 text-white",
@@ -67,6 +79,14 @@ const TAGS = {
 }
 const PROJECTS = [
 {
+    title: "ChatBot E-Commerce",
+    description:
+      "Un chatbot asistente virtual para e-commerce desarrollado con Django, diseñado para proporcionar una experiencia de usuario amigable y elegante. El asistente puede ayudar con consultas sobre productos, precios, envíos y métodos de pago.",
+    github: "https://github.com/yamilabelen98/ChatBot",
+    image: "/Img/chatbot.jpg",
+    tags: [TAGS.Python, TAGS.JS, TAGS.CSS, TAGS.HTML, TAGS.Django],
+  },
+{
     title: "Clon X",
     description:
       "Permite a los usuarios iniciar sesión, publicar tweets, ver su feed y gestionar su perfil. Cuenta con autenticación con GitHub: Inicia sesión fácilmente usando tu cuenta de GitHub. Gestión de sesión: Cierra sesión cuando lo desees. Perfil de usuario: Visualiza tu información de perfil, incluyendo: nombre de usuario, nombre completo y avatar. Feed de tweets: Ve tus tweets. Publicación de tweets: Crea y publica nuevos tweets.",
@@ -107,7 +127,7 @@ const PROJECTS = [
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl border-2 lg:border-3 lg:border-[#ed6195] lg:hover:border-[#ed6195]lg:hover:bg-[#f5b7cd] ">
-      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+      <img alt="Proyectos" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
     </div>
   </div>
 
