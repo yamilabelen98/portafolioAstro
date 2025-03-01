@@ -72,51 +72,26 @@ const { description, title } = Astro.props;
       content="https://master--portafolio-yamila-de-olivera.netlify.app/"
     />
     <meta property="og:type" content="website" />
-
     <!-- Google tag (gtag.js) para Astro -->
-    <script is:inline>
-      (function () {
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-          dataLayer.push(arguments);
-        }
-        gtag("js", new Date());
-        gtag("config", "G-C952QZT3MT");
-      })();
-    </script>
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-KRWXD22K");
-    </script>
-    <!-- End Google Tag Manager -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-C952QZT3MT"
     ></script>
 
-    <title>{title}</title>
-  </head>
-
-  <body
+    <script is:inline>
+      // @ts-ignore
+      window.dataLayer = window.dataLayer || [];
+      // @ts-ignore
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      // @ts-ignore
+      gtag("js", new Date());
+      // @ts-ignore
+      gtag("config", "G-C952QZT3MT");
+    </script>
+  </head><body
     class="relative text-black bg-neutral-50 bg-[radial-gradient(ellipse_80%80%_at_50%-20%,rgb(255,0,0,.40),rgba(255,105,180,.20))]
  dark:text-white dark:bg-neutral-950 dark:bg-[radial-gradient(ellipse_80%80%_at_50%-20%,rgba(255,0,182,.20),rgba(255,255,255,0))]"
   >
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-KRWXD22K"
-        height="0"
-        width="0"
-        style="display:none;visibility:hidden"></iframe></noscript
-    >
-    <!-- End Google Tag Manager (noscript) -->
     <Header />
     <slot />
     <Footer />
