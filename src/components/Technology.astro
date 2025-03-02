@@ -107,11 +107,13 @@ const STACK_SECTIONS = [
             {section.title}
           </h3>
 
-          <ul class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+          <ul class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-3">
             {section.items.map((skill) => (
-              <li class="rounded-2xl flex flex-col justify-center items-center transition-transform duration-300 hover:scale-110 hover:shadow-lg cursor-pointer p-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 hover:border-[#ed6195] dark:hover:border-[#eb00bc]">
+              <li class="w-28 h-24 rounded-2xl flex flex-col justify-center items-center transition-transform duration-300 hover:scale-105 hover:shadow-md cursor-pointer p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 hover:border-[#ed6195] dark:hover:border-[#eb00bc]">
                 <skill.icon class="size-12 mb-2" />
-                <span class="text-sm font-semibold">{skill.name}</span>
+                <span class="text-sm font-semibold text-center">
+                  {skill.name}
+                </span>
               </li>
             ))}
           </ul>
