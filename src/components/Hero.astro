@@ -1,16 +1,18 @@
 ---
-const personalImageAlt = "Yamila De Olivera"
-import Badge from "../components/Badge.astro"
-import LinkedInIcon from "../components/icon/Linkedin.astro"
-import MailIcon from "../components/icon/Mail.astro"
-import Certificado from "../components/icon/Certificado.astro"
-import SocialPill from "../components/SocialPill.astro"
-import Arrow from "../components/icon/Arrow.astro"
+const personalImageAlt = "Yamila De Olivera";
+import Badge from "../components/Badge.astro";
+import LinkedInIcon from "../components/icon/Linkedin.astro";
+import MailIcon from "../components/icon/Mail.astro";
+import Certificado from "../components/icon/Certificado.astro";
+import SocialPill from "../components/SocialPill.astro";
+import Arrow from "../components/icon/Arrow.astro";
 ---
 
 <div class="max-w-xl">
   <div class="flex gap-4 mb-4">
-    <span class="relative inline-flex items-center justify-center overflow-hidden rounded-full p-[2.5px]">
+    <span
+      class="relative inline-flex items-center justify-center overflow-hidden rounded-full p-[2.5px]"
+    >
       <span
         class="absolute inset-0 animate-spin bg-[conic-gradient(from_90deg_at_50%_50%,#ed6195_0%,#00ffff_50%,#ed6195_100%)]
 dark:bg-[conic-gradient(from_90deg_at_50%_50%,#eb00bc_0%,#00d2ff_50%,#eb00bc_100%)]"
@@ -22,28 +24,31 @@ dark:bg-[conic-gradient(from_90deg_at_50%_50%,#eb00bc_0%,#00d2ff_50%,#eb00bc_100
       />
     </span>
     <a
-      href='/CV_Yamila_De_Olivera.pdf'
+      href="/Yamila De Olivera - Junior Full Stack Engineer.pdf"
       target="_blank"
       rel="noopener"
       class="flex items-center transition md:justify-center md:hover:scale-105"
     >
-      <Badge>Disponible para trabajar, CV<Arrow class="size-4"/></Badge>
+      <Badge>Disponible para trabajar, CV<Arrow class="size-4" /></Badge>
     </a>
   </div>
   <h1
     class="text-4xl font-bold tracking-tight text-black sm:text-5xl dark:text-white"
   >
-  Hola! Soy Yamila
+    Hola! Soy Yamila 👋
   </h1>
   <span
-  class="mt-3 font-bold inline-flex animate-background-shine bg-[linear-gradient(110deg,#ed6195,45%,#00ffff,55%,#ed6195)] dark:bg-[linear-gradient(110deg,#eb00bc,45%,#00d2ff,55%,#eb00bc)] bg-[length:250%_100%] bg-clip-text text-xl text-transparent"
->
-  Desarrolladora Fullstack
-</span>
+    class="mt-3 font-bold inline-flex animate-background-shine
+           bg-[linear-gradient(110deg,#ed6195,45%,#00ffff,55%,#ed6195)]
+           dark:bg-[linear-gradient(110deg,#eb00bc,45%,#00d2ff,55%,#eb00bc)]
+           bg-[length:250%_100%] bg-clip-text text-xl text-transparent"
+  >
+    Desarrolladora Full Stack | React | Node.js | UX/UI
+  </span>
   <p
     class="mt-6 text-xl text-black dark:[&>strong]:text-[#eb00bc] [&>strong]:text-[#ed6195] [&>strong]:font-semibold dark:text-gray-100"
   >
-  En busca de oportunidades para desenpeñar mi experiencia aprendida. <strong
+    En busca de oportunidades para desenpeñar mi experiencia aprendida. <strong
       >Estudiante de Ingenieria Informática. Con un año de experiencia Freelance</strong
     >, de Buenos Aires, Argentina. Especializada en hacer sitios web únicos.
   </p>
@@ -56,7 +61,9 @@ dark:bg-[conic-gradient(from_90deg_at_50%_50%,#eb00bc_0%,#00d2ff_50%,#eb00bc_100
       <LinkedInIcon class="size-4" />
       LinkedIn
     </SocialPill>
-    <SocialPill  href="https://certificates.soyhenry.com/new-cert?id=e04e1bfa344d77f472180b7f723871428ec5d2a53a3c1571fe0e056404e983a1">
+    <SocialPill
+      href="https://certificates.soyhenry.com/new-cert?id=e04e1bfa344d77f472180b7f723871428ec5d2a53a3c1571fe0e056404e983a1"
+    >
       <Certificado class="size-5" />
       Certificado Henry
     </SocialPill>

@@ -9,71 +9,82 @@ import Music from "../components/icon/Music.astro";
 import Fotografia from "../components/icon/Camera.astro";
 import Gym from "../components/icon/Weight.astro";
 ---
-<div> 
-<article class="flex flex-col items-center justify-center gap-8 text-black dark:text-gray-100 md:flex-row">
-  <div
-    class="[&>p]:mb-4 [&>p>strong]:text-[#ed6195] dark:[&>p>strong]:text-[#eb00bc] order-2 md:order-1"
-  >
-    <p>
-      Me llamo Yamila, amante de los gatos. Me considero una persona bastante artística y lógica. Empecé en la
-      programación gracias a la influencia de mi entorno en pandemia y me animé a dar mis primeros pasos con Henry. Actualmente estoy <strong
-        >liderando mis propios proyectos y haciendo freelance</strong
-      >.
-    </p>
 
-    <p>
-      Algunos de mis éxitos incluyen <strong
-        >colaboraciones en páginas web y apps de ventas, tambien tengo mis propios proyectos de venta de productos</strong
-      >. Aunque hoy en día programo más en Front-End, porque es lo que más me gusta, se descenvolverme en los demás ámbitos y siempre estoy en constante aprendizaje.
+<div
+  class="flex flex-col items-center justify-center gap-12 md:flex-row md:items-start md:gap-16"
+>
+  <!-- Texto "Sobre Mí" -->
+  <div class="order-2 md:order-1 max-w-xl text-center md:text-left">
+    <h2 class="text-3xl font-bold text-gray-900 dark:text-gray-100">
+      ¡Hola! Soy Yamila 👋
+    </h2>
+    <p class="mt-4 text-gray-700 dark:text-gray-300">
+      Desarrolladora Full Stack apasionada por la creación de experiencias
+      digitales. Mi primer acercamiento a la tecnología fue a través de los
+      videojuegos, y con el tiempo descubrí mi amor por la programación. Comencé
+      mi camino en Henry durante la pandemia, y desde entonces no he dejado de
+      aprender y mejorar mis habilidades.
     </p>
-
-    <p>
-      Como programadora, <strong
-        > soy siempre apasionada en lo que hago</strong
-      >. Mi objetivo es mejorar y encontrar un equipo donde pueda colaborar con mis conocimientos y trabajo.
+    <p class="mt-4 text-gray-700 dark:text-gray-300">
+      Actualmente, <strong class="text-[#ed6195] dark:text-[#eb00bc]"
+        >lidero mis propios proyectos y trabajo como freelance</strong
+      >, desarrollando soluciones web modernas y optimizadas. Aunque mi fuerte
+      es el
+      <strong class="text-[#ed6195] dark:text-[#eb00bc]">Front-End</strong>,
+      también tengo experiencia en el Back-End y la arquitectura de
+      aplicaciones.
+    </p>
+    <p class="mt-4 text-gray-700 dark:text-gray-300">
+      Mi objetivo es seguir creciendo en este apasionante mundo de la tecnología
+      y formar parte de un equipo donde pueda aportar mis conocimientos y
+      creatividad.
     </p>
   </div>
 
-  <img width="200" height="200" src="/Img/photo.webp" alt={personalImageAlt} class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-[conic-gradient(from_90deg_at_50%_50%,#00ffff_0%,#c43f70_50%,#00ffff_100%)]
- dark:bg-[linear-gradient(135deg,#eb00bc,#00d2ff)] ring-1 " style="object-position: 50% 50%">
-
-</article>
-
-<h2 class="mt-6 text-xl font-bold">Intereses Personales :</h2>
-<div class="flex items-center justify-center mt-4">
-<ul class="grid grid-cols-2 gap-16 md:gap-18 lg:gap-20 xl:gap-25 text-center text-sm font-medium dark:text-white/90 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4">
-  <li class="flex flex-col items-center justify-center w-24 h-24 bg-[#f5b7cd] rounded-lg dark:bg-gray-700 hover:bg-[#ed6195] dark:hover:bg-[#eb00bc] hover:text-black transition-colors">
-    <Game class="mb-2" />
-    <a href="" class="">Videojuegos</a>
-  </li>
-  <li class="flex flex-col items-center justify-center w-24 h-24 bg-[#f5b7cd] rounded-lg dark:bg-gray-700 hover:bg-[#ed6195] dark:hover:bg-[#eb00bc] hover:text-black transition-colors">
-    <Maquillaje class="mb-2" />
-    <a href="" class="">Maquillaje</a>
-  </li>
-  <li class="flex flex-col items-center justify-center w-24 h-24 bg-[#f5b7cd] rounded-lg dark:bg-gray-700 hover:bg-[#ed6195] dark:hover:bg-[#eb00bc] hover:text-black transition-colors">
-    <Moda class="mb-2" />
-    <a href="" class="">Moda</a>
-  </li>
-  <li class="flex flex-col items-center justify-center w-24 h-24 bg-[#f5b7cd] rounded-lg dark:bg-gray-700 hover:bg-[#ed6195] dark:hover:bg-[#eb00bc] hover:text-black transition-colors">
-    <Viajar class="mb-2" />
-    <a href="" class="">Viajar</a>
-  </li>
-  <li class="flex flex-col items-center justify-center w-24 h-24 bg-[#f5b7cd] rounded-lg dark:bg-gray-700 hover:bg-[#ed6195] dark:hover:bg-[#eb00bc] hover:text-black transition-colors">
-    <Fotografia class="mb-2" />
-    <a href="" class="">Fotografía</a>
-  </li>
-  <li class="flex flex-col items-center justify-center w-24 h-24 bg-[#f5b7cd] rounded-lg dark:bg-gray-700 hover:bg-[#ed6195] dark:hover:bg-[#eb00bc] hover:text-black transition-colors">
-    <Gym class="mb-2" />
-    <a href="/" class="">Entrenar</a>
-  </li>
-  <li class="flex flex-col items-center justify-center w-24 h-24 bg-[#f5b7cd] rounded-lg dark:bg-gray-700 hover:bg-[#ed6195] dark:hover:bg-[#eb00bc] hover:text-black transition-colors">
-    <Book class="mb-2" />
-    <a href="" class="">Leer</a>
-  </li>
-  <li class="flex flex-col items-center justify-center w-24 h-24 bg-[#f5b7cd] rounded-lg dark:bg-gray-700 hover:bg-[#ed6195] dark:hover:bg-[#eb00bc] hover:text-black transition-colors">
-    <Music class="mb-2" />
-    <a href="" class="">Música</a>
-  </li>
-</ul>
+  <!-- Imagen de Perfil (Manteniendo el Diseño Anterior) -->
+  <img
+    width="200"
+    height="200"
+    src="/Img/photo.webp"
+    alt={personalImageAlt}
+    class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl
+           bg-[conic-gradient(from_90deg_at_50%_50%,#00ffff_0%,#c43f70_50%,#00ffff_100%)]
+           dark:bg-[linear-gradient(135deg,#eb00bc,#00d2ff)] ring-1 transition-transform duration-300 hover:scale-105"
+    style="object-position: 50% 50%;"
+  />
 </div>
-</div> 
+
+<!-- Sección de Intereses -->
+<h2
+  class="mt-10 text-xl font-bold text-center text-gray-900 dark:text-gray-100"
+>
+  🎨 Mis Intereses Personales
+</h2>
+<div class="flex items-center justify-center mt-6">
+  <ul
+    class="grid grid-cols-2 gap-6 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 text-center text-sm font-medium dark:text-white/90"
+  >
+    {
+      [
+        { icon: Game, name: "Videojuegos" },
+        { icon: Maquillaje, name: "Maquillaje" },
+        { icon: Moda, name: "Moda" },
+        { icon: Viajar, name: "Viajar" },
+        { icon: Fotografia, name: "Fotografía" },
+        { icon: Gym, name: "Entrenar" },
+        { icon: Book, name: "Leer" },
+        { icon: Music, name: "Música" },
+      ].map(({ icon: Icon, name }) => (
+        <li
+          class="flex flex-col items-center justify-center w-24 h-24 bg-[#f5b7cd] rounded-lg dark:bg-gray-700 
+                 hover:bg-[#ed6195] dark:hover:bg-[#eb00bc] hover:text-black transition-colors shadow-md 
+                 cursor-pointer hover:scale-110"
+          title={name}
+        >
+          <Icon class="mb-2 size-8" />
+          <span>{name}</span>
+        </li>
+      ))
+    }
+  </ul>
+</div>

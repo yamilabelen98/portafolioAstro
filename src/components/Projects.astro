@@ -1,103 +1,55 @@
 ---
-
-import GitHub from "./icon/Hub.astro"
-import JS from "./icon/JS.astro"
-import CSS from "./icon/CSS.astro"
-import Node from "./icon/Node.astro"
-import Python from "./icon/Python.astro"
-import ExpressJS from "./icon/Express.astro"
-import Tailwind from "./icon/Tailwind.astro"
-import React from "./icon/React.astro"
-import NextJS from "./icon/NextJS.astro"
-import Supabase from "./icon/Supabase.astro"
-import Typescript from "./icon/TypeScript.astro"
-import HTML from "./icon/Html.astro"
-import Django from "./icon/Django.astro"
-import LinkButton from "./LinkButton.astro"
+import GitHub from "./icon/Hub.astro";
+import JS from "./icon/JS.astro";
+import CSS from "./icon/CSS.astro";
+import Node from "./icon/Node.astro";
+import Python from "./icon/Python.astro";
+import ExpressJS from "./icon/Express.astro";
+import Tailwind from "./icon/Tailwind.astro";
+import React from "./icon/React.astro";
+import NextJS from "./icon/NextJS.astro";
+import Supabase from "./icon/Supabase.astro";
+import Typescript from "./icon/TypeScript.astro";
+import HTML from "./icon/Html.astro";
+import Django from "./icon/Django.astro";
+import LinkButton from "./LinkButton.astro";
 
 const TAGS = {
-  Django: {
-    name: "Django",
-    class: "bg-gray-500 text-white",
-    icon: Django,
-  },
-  HTML: {
-    name: "HTML",
-    class: "bg-orange-400 text-white",
-    icon: HTML,
-  },
-  JS: {
-    name: "JavaScript",
-    class: "bg-blue-500 text-white",
-    icon: JS,
-  },
-  Supabase: {
-    name: "Supabase",
-    class: "bg-green-200 text-green-700",
-    icon: Supabase,
-  },
-  NextJS: {
-    name: "NextJS",
-    class: "bg-gray-500 text-white",
-    icon: NextJS,
-  },
-  Typescript: {
-    name: "Typescript",
-    class: "bg-blue-700 text-white",
-    icon: Typescript,
-  },
-  React: {
-    name: "React",
-    class: "bg-blue-500 text-white",
-    icon: React,
-  },
-  CSS: {
-    name: "CSS",
-    class: "bg-blue-900 text-white",
-    icon: CSS,
-  },
-  NodeJS: {
-    name: "NodeJS",
-    class: "bg-green-700 text-white",
-    icon: Node,
-  },
-  ExpressJS: {
-    name: "ExpressJS",
-    class: "bg-gray-500 text-white",
-    icon: ExpressJS,
-  },
-  Python: {
-    name: "Python",
-    class: "bg-yellow-600 text-white",
-    icon: Python,
-  },
-  TailwindCSS: {
-    name: "TailwindCSS",
-    class: "bg-gray-200 text-black",
-    icon: Tailwind,
-  },
-}
+  Django: { name: "Django", class: "bg-gray-500 text-white", icon: Django },
+  HTML: { name: "HTML", class: "bg-orange-400 text-white", icon: HTML },
+  JS: { name: "JavaScript", class: "bg-blue-500 text-white", icon: JS },
+  Supabase: { name: "Supabase", class: "bg-green-200 text-green-700", icon: Supabase },
+  NextJS: { name: "NextJS", class: "bg-gray-500 text-white", icon: NextJS },
+  Typescript: { name: "Typescript", class: "bg-blue-700 text-white", icon: Typescript },
+  React: { name: "React", class: "bg-blue-500 text-white", icon: React },
+  CSS: { name: "CSS", class: "bg-blue-900 text-white", icon: CSS },
+  NodeJS: { name: "NodeJS", class: "bg-green-700 text-white", icon: Node },
+  ExpressJS: { name: "ExpressJS", class: "bg-gray-500 text-white", icon: ExpressJS },
+  Python: { name: "Python", class: "bg-yellow-600 text-white", icon: Python },
+  TailwindCSS: { name: "TailwindCSS", class: "bg-gray-200 text-black", icon: Tailwind },
+};
+
 const PROJECTS = [
-{
+  {
     title: "ChatBot E-Commerce",
     description:
-      "Un chatbot asistente virtual para e-commerce desarrollado con Django, diseñado para proporcionar una experiencia de usuario amigable y elegante. El asistente puede ayudar con consultas sobre productos, precios, envíos y métodos de pago.",
+      "Un chatbot asistente virtual para e-commerce desarrollado con Django, diseñado para proporcionar una experiencia de usuario amigable y elegante.",
     github: "https://github.com/yamilabelen98/ChatBot",
     image: "/Img/chatbot.webp",
     tags: [TAGS.Python, TAGS.JS, TAGS.CSS, TAGS.HTML, TAGS.Django],
   },
-{
+  {
     title: "Clon X",
     description:
-      "Permite a los usuarios iniciar sesión, publicar tweets, ver su feed y gestionar su perfil. Cuenta con autenticación con GitHub: Inicia sesión fácilmente usando tu cuenta de GitHub. Gestión de sesión: Cierra sesión cuando lo desees. Perfil de usuario: Visualiza tu información de perfil, incluyendo: nombre de usuario, nombre completo y avatar. Feed de tweets: Ve tus tweets. Publicación de tweets: Crea y publica nuevos tweets.",
+      "Una app similar a Twitter donde los usuarios pueden iniciar sesión, publicar tweets, gestionar su perfil y explorar su feed en tiempo real.",
     github: "https://github.com/yamilabelen98/Clon-X",
     image: "/Img/clon_x.webp",
     tags: [TAGS.Typescript, TAGS.TailwindCSS, TAGS.React, TAGS.NextJS, TAGS.Supabase],
   },
-{
+  {
     title: "Tetris Game",
     description:
-      "Desarollado en Python utilizando la biblioteca Pygame. Las piezas caen y puedes controlar su movimiento y rotación. Además, incluye música de fondo, funciones de pausa y control de volumen, y una pantalla de Game Over cuando pierdes.",
+      "Desarrollado en Python con Pygame. Incluye controles de movimiento, rotación, música de fondo y un sistema de puntuación.",
     github: "https://github.com/yamilabelen98/GAME_TETRIS",
     image: "/Img/tetris.webp",
     tags: [TAGS.Python],
@@ -105,69 +57,74 @@ const PROJECTS = [
   {
     title: "Proyecto Bot Discord",
     description:
-      "Un bot de Discord diseñado como parte de mi aprendizaje en desarrollo de bots y automatización. Incluye funcionalidades básicas como comandos personalizados, moderación y respuestas automáticas, y está creado con un enfoque en la optimización y el uso eficiente de la API de Discord. Este proyecto forma parte de mi portafolio como muestra de mi habilidad en el desarrollo de bots y aplicaciones interactivas.",
+      "Un bot de Discord con comandos personalizados, moderación y respuestas automáticas, optimizado para eficiencia.",
     github: "https://github.com/yamilabelen98/BotDiscord",
     image: "/Img/bot.webp",
     tags: [TAGS.JS, TAGS.ExpressJS, TAGS.NodeJS],
   },
   {
-    title: "Proyecto Individual VideoGame - con JavaScript",
+    title: "Proyecto Individual VideoGame",
     description:
-      "Desarollo de single-page application interactiva, con temática de VideoJuegos. Utilizando React para el Front-End y Redux para el manejo de estados. La parte visual fue desarrollada utilizando CSS puro y sin ayuda de librerías externas. El Back-end fue desarrollado con la ayuda de una API que envía la información a través del mismo y codificado con NodeJS y con la ayuda de ExpressJS. A su vez, extendÍ funcionalidades a la API original, tales como el creado de nuevos personajes.",
+      "SPA interactiva sobre videojuegos. Utiliza React en el Front-End, Redux para estado global y una API propia en Node.js y ExpressJS.",
     github: "https://github.com/yamilabelen98/Proyecto-Individual-VideoGame",
     image: "/Img/videogame.webp",
     tags: [TAGS.JS, TAGS.CSS, TAGS.ExpressJS, TAGS.NodeJS],
   },
-]
+];
 ---
 
 <div class="flex flex-col gap-y-16">
-  {
-    PROJECTS.map(({ image, title, description, tags, github }) => (
-    <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-  <div class="w-full md:w-1/2">
-    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl border-2 lg:border-3 lg:border-[#ed6195] lg:hover:border-[#ed6195]lg:hover:bg-[#f5b7cd] ">
-      <img alt="Proyectos" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
-    </div>
-  </div>
+  {PROJECTS.map(({ image, title, description, tags, github }, index) => (
+    <article 
+      class={`bg-[#f5b7cd] dark:bg-gray-700 rounded-lg shadow-lg p-6 border-2 border-transparent transition-all duration-300 
+              hover:scale-105 hover:shadow-[0px_0px_20px_5px_#ed6195] dark:hover:shadow-[0px_0px_20px_5px_#eb00bc] 
+              ${index % 2 !== 0 ? "lg:translate-y-4" : ""}`}
+    >
+      <div class="flex flex-col md:flex-row gap-6">
+        
+        <!-- Imagen del Proyecto -->
+        <div class="w-full md:w-1/2">
+          <img
+            alt="Proyecto {title}"
+            class="object-cover object-top w-full h-56 rounded-md transition-transform duration-500 md:group-hover:scale-105"
+            loading="lazy"
+            src={image}
+          />
+        </div>
 
-  <div class="w-full md:w-1/2 md:max-w-lg">
-    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-      {title}
-    </h3>
-    <div class="flex flex-wrap mt-2">
-      <ul class="flex flex-row mb-2 gap-x-2 flex-wrap gap-y-2">
-          {tags.map((tag) => (
-            <li class="flex flex-row items-center">
-              <span
-                class={`flex items-center flex-row rounded-full text-xs ${tag.class} gap-x-2 py-1 px-2`}
-              >
-                <tag.icon class="size-4" />
-                {tag.name}
-              </span>
-            </li>
-          ))}
-        </ul>
+        <!-- Detalles del Proyecto -->
+        <div class="w-full md:w-1/2 md:max-w-lg">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+            {title}
+          </h3>
+          
+          <div class="mt-2 text-gray-700 dark:text-gray-400">
+            {description}
+          </div>
 
-      <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
-      <footer class="flex items-end justify-start mt-4 gap-x-4">
-          {github && (
-            <LinkButton href={github}>
-              <GitHub class="size-6" />
-              Code
-              
-            </LinkButton>
-          )}
-          {/* {link && (
-            <LinkButton href={link}>
-              <Link class="size-4" />
-              Preview
-            </LinkButton>
-          )} */}
-        </footer>
-    </div>
-  </div>
-</article>
-    ))
-  }
+          <!-- Tecnologías -->
+          <ul class="flex flex-wrap gap-2 mt-3">
+            {tags.map((tag) => (
+              <li class="flex flex-row items-center">
+                <span class={`flex items-center rounded-full text-xs px-3 py-1 ${tag.class}`}>
+                  <tag.icon class="size-4 mr-1" />
+                  {tag.name}
+                </span>
+              </li>
+            ))}
+          </ul>
+
+          <!-- Botón GitHub -->
+          <footer class="flex items-center mt-4">
+            {github && (
+              <LinkButton href={github} class="bg-gray-800 text-white font-semibold px-4 py-2 rounded-md hover:bg-black transition-colors">
+                <GitHub class="size-5" />
+                Código en GitHub
+              </LinkButton>
+            )}
+          </footer>
+        </div>
+      </div>
+    </article>
+  ))}
 </div>
