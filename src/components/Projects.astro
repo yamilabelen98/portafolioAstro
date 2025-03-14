@@ -13,6 +13,7 @@ import Typescript from "./icon/TypeScript.astro";
 import HTML from "./icon/Html.astro";
 import Django from "./icon/Django.astro";
 import LinkButton from "./LinkButton.astro";
+import SQLite from "./icon/Sqlite.astro";
 
 const TAGS = {
   Django: { name: "Django", class: "bg-gray-500 text-white", icon: Django },
@@ -27,16 +28,17 @@ const TAGS = {
   ExpressJS: { name: "ExpressJS", class: "bg-gray-500 text-white", icon: ExpressJS },
   Python: { name: "Python", class: "bg-yellow-600 text-white", icon: Python },
   TailwindCSS: { name: "TailwindCSS", class: "bg-gray-200 text-black", icon: Tailwind },
+  SQLite: { name: "SQLite", class: "bg-blue-200 text-black", icon: SQLite },
 };
 
 const PROJECTS = [
 {
     title: "🎬 Recomendador de Películas",
     description:
-      "Aplicación para buscar películas, filtrarlas por género, ordenarlas por popularidad o puntuación, ver recomendaciones personalizadas y detalles completos. Diseño pastel moderno y responsive.",
+      "Aplicación web para buscar películas con filtros combinables, perfil de usuario, login seguro, recomendaciones y diseño responsive.",
     github: "https://github.com/yamilabelen98/movie_recommender",
     image: "public/Img/Recomendador-de-Peliculas.webp",
-    tags: [TAGS.Python, TAGS.TailwindCSS, TAGS.HTML, TAGS.React],
+    tags: [TAGS.Python, TAGS.TailwindCSS, TAGS.HTML, TAGS.React, TAGS.SQLite],
   },
   {
     title: "ChatBot E-Commerce",
