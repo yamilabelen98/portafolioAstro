@@ -1,32 +1,29 @@
 ---
-import Layout from "../layouts/Layout.astro"
+import Layout from '../layouts/Layout.astro';
 
-import AboutMe from "../components/AboutMe.astro"
-import Briefcase from "../components/icon/BriefCase.astro"
-import CodeIcon from "../components/icon/Code.astro"
-import Experience from "../components/Experience.astro"
-import ProfileCheck from "../components/icon/ProfileCheck.astro"
-import Projects from "../components/Projects.astro"
-import SectionContainer from "../components/SectionContainer.astro"
-import Hero from "../components/Hero.astro"
-import Technology from "../components/Technology.astro"
+import AboutMe from '../components/AboutMe.astro';
+import Briefcase from '../components/icon/BriefCase.astro';
+import CodeIcon from '../components/icon/Code.astro';
+import Experience from '../components/Experience.astro';
+import ProfileCheck from '../components/icon/ProfileCheck.astro';
+import Projects from '../components/Projects.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import Hero from '../components/Hero.astro';
+import Technology from '../components/Technology.astro';
 ---
 
-<Layout 
-title="Portafolio de Yamila De Olivera - Desarrolladora y Programadora Web"
-description="Programadora apasionada por crear soluciones innovadoras y funcionales en la web, me dedico a transformar ideas en experiencias digitales atractivas y funcionales que brindan una excelente experiencia de usuario. Mi enfoque se centra en la atención al detalle y la mejora continua, buscando siempre aprender y crecer en el mundo del desarrollo web. Estoy emocionada por aportar mis conocimientos y entusiasmo a proyectos desafiantes y contribuir al éxito del equipo."
+<Layout
+  title="Portafolio de Yamila De Olivera - Desarrolladora y Programadora Web"
+  description="Programadora apasionada por crear soluciones innovadoras y funcionales en la web, me dedico a transformar ideas en experiencias digitales atractivas y funcionales que brindan una excelente experiencia de usuario. Mi enfoque se centra en la atención al detalle y la mejora continua, buscando siempre aprender y crecer en el mundo del desarrollo web. Estoy emocionada por aportar mis conocimientos y entusiasmo a proyectos desafiantes y contribuir al éxito del equipo."
 >
   <main class="px-4">
     <SectionContainer class="py-16 md:py-36">
-      <Hero>
-      </slot>
-    </Hero>
+      <Hero />
     </SectionContainer>
-    <div class="space-y-24">
+  </main>
+  <div class="space-y-24">
     <SectionContainer id="experiencia">
-      <h2
-        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black dark:text-white"
-      >
+      <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black dark:text-white">
         <Briefcase class="size-8" />
         Experiencia laboral
       </h2>
@@ -34,9 +31,7 @@ description="Programadora apasionada por crear soluciones innovadoras y funciona
     </SectionContainer>
 
     <SectionContainer id="proyectos">
-      <h2
-        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black dark:text-white"
-      >
+      <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black dark:text-white">
         <CodeIcon class="size-7" />
         Proyectos
       </h2>
@@ -44,9 +39,7 @@ description="Programadora apasionada por crear soluciones innovadoras y funciona
     </SectionContainer>
 
     <SectionContainer id="sobre-mi">
-      <h2
-        class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black dark:text-white"
-      >
+      <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black dark:text-white">
         <ProfileCheck class="size-8" />
         Sobre mí
       </h2>
@@ -56,5 +49,4 @@ description="Programadora apasionada por crear soluciones innovadoras y funciona
       <Technology />
     </SectionContainer>
   </div>
-  </main>
 </Layout>

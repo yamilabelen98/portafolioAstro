@@ -1,43 +1,35 @@
 ---
-const personalImageAlt = "Yamila De Olivera";
-import Game from "../components/icon/Game.astro";
-import Moda from "../components/icon/Moda.astro";
-import Maquillaje from "../components/icon/Brush.astro";
-import Book from "../components/icon/Book.astro";
-import Viajar from "../components/icon/Plane.astro";
-import Music from "../components/icon/Music.astro";
-import Fotografia from "../components/icon/Camera.astro";
-import Gym from "../components/icon/Weight.astro";
+const personalImageAlt = 'Yamila De Olivera';
+import Game from '../components/icon/Game.astro';
+import Moda from '../components/icon/Moda.astro';
+import Maquillaje from '../components/icon/Brush.astro';
+import Book from '../components/icon/Book.astro';
+import Viajar from '../components/icon/Plane.astro';
+import Music from '../components/icon/Music.astro';
+import Fotografia from '../components/icon/Camera.astro';
+import Gym from '../components/icon/Weight.astro';
 ---
 
-<div
-  class="flex flex-col items-center justify-center gap-12 md:flex-row md:items-start md:gap-16"
->
+<div class="flex flex-col items-center justify-center gap-12 md:flex-row md:items-start md:gap-16">
   <!-- Texto "Sobre Mí" -->
   <div class="order-2 md:order-1 max-w-xl text-center md:text-left">
-    <h2 class="text-3xl font-bold text-gray-900 dark:text-gray-100">
-      ¡Hola! Soy Yamila 👋
-    </h2>
+    <h2 class="text-3xl font-bold text-gray-900 dark:text-gray-100">¡Hola! Soy Yamila 👋</h2>
     <p class="mt-4 text-gray-700 dark:text-gray-300">
-      Desarrolladora Full Stack apasionada por la creación de experiencias
-      digitales. Mi primer acercamiento a la tecnología fue a través de los
-      videojuegos, y con el tiempo descubrí mi amor por la programación. Comencé
-      mi camino en Henry durante la pandemia, y desde entonces no he dejado de
-      aprender y mejorar mis habilidades.
+      Desarrolladora Full Stack apasionada por la creación de experiencias digitales. Mi primer
+      acercamiento a la tecnología fue a través de los videojuegos, y con el tiempo descubrí mi amor
+      por la programación. Comencé mi camino en Henry durante la pandemia, y desde entonces no he
+      dejado de aprender y mejorar mis habilidades.
     </p>
     <p class="mt-4 text-gray-700 dark:text-gray-300">
       Actualmente, <strong class="text-[#ed6195] dark:text-[#eb00bc]"
         >lidero mis propios proyectos y trabajo como freelance</strong
-      >, desarrollando soluciones web modernas y optimizadas. Aunque mi fuerte
-      es el
-      <strong class="text-[#ed6195] dark:text-[#eb00bc]">Front-End</strong>,
-      también tengo experiencia en el Back-End y la arquitectura de
-      aplicaciones.
+      >, desarrollando soluciones web modernas y optimizadas. Aunque mi fuerte es el
+      <strong class="text-[#ed6195] dark:text-[#eb00bc]">Front-End</strong>, también tengo
+      experiencia en el Back-End y la arquitectura de aplicaciones.
     </p>
     <p class="mt-4 text-gray-700 dark:text-gray-300">
-      Mi objetivo es seguir creciendo en este apasionante mundo de la tecnología
-      y formar parte de un equipo donde pueda aportar mis conocimientos y
-      creatividad.
+      Mi objetivo es seguir creciendo en este apasionante mundo de la tecnología y formar parte de
+      un equipo donde pueda aportar mis conocimientos y creatividad.
     </p>
   </div>
 
@@ -55,9 +47,7 @@ import Gym from "../components/icon/Weight.astro";
 </div>
 
 <!-- Sección de Intereses -->
-<h2
-  class="mt-10 text-xl font-bold text-center text-gray-900 dark:text-gray-100"
->
+<h2 class="mt-10 text-xl font-bold text-center text-gray-900 dark:text-gray-100">
   🎨 Mis Intereses Personales
 </h2>
 <div class="flex items-center justify-center mt-6">
@@ -66,14 +56,14 @@ import Gym from "../components/icon/Weight.astro";
   >
     {
       [
-        { icon: Game, name: "Videojuegos" },
-        { icon: Maquillaje, name: "Maquillaje" },
-        { icon: Moda, name: "Moda" },
-        { icon: Viajar, name: "Viajar" },
-        { icon: Fotografia, name: "Fotografía" },
-        { icon: Gym, name: "Entrenar" },
-        { icon: Book, name: "Leer" },
-        { icon: Music, name: "Música" },
+        { icon: Game, name: 'Videojuegos' },
+        { icon: Maquillaje, name: 'Maquillaje' },
+        { icon: Moda, name: 'Moda' },
+        { icon: Viajar, name: 'Viajar' },
+        { icon: Fotografia, name: 'Fotografía' },
+        { icon: Gym, name: 'Entrenar' },
+        { icon: Book, name: 'Leer' },
+        { icon: Music, name: 'Música' },
       ].map(({ icon: Icon, name }) => (
         <li
           class="flex flex-col items-center justify-center w-24 h-24 bg-[#f5b7cd] rounded-lg dark:bg-gray-700 

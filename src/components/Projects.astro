@@ -1,140 +1,147 @@
 ---
-import GitHub from "./icon/Hub.astro";
-import JS from "./icon/JS.astro";
-import CSS from "./icon/CSS.astro";
-import Node from "./icon/Node.astro";
-import Python from "./icon/Python.astro";
-import ExpressJS from "./icon/Express.astro";
-import Tailwind from "./icon/Tailwind.astro";
-import React from "./icon/React.astro";
-import NextJS from "./icon/NextJS.astro";
-import Supabase from "./icon/Supabase.astro";
-import Typescript from "./icon/TypeScript.astro";
-import HTML from "./icon/Html.astro";
-import Django from "./icon/Django.astro";
-import LinkButton from "./LinkButton.astro";
-import SQLite from "./icon/Sqlite.astro";
+import GitHub from './icon/Hub.astro';
+import JS from './icon/JS.astro';
+import CSS from './icon/CSS.astro';
+import Node from './icon/Node.astro';
+import Python from './icon/Python.astro';
+import ExpressJS from './icon/Express.astro';
+import Tailwind from './icon/Tailwind.astro';
+import React from './icon/React.astro';
+import NextJS from './icon/NextJS.astro';
+import Supabase from './icon/Supabase.astro';
+import Typescript from './icon/TypeScript.astro';
+import HTML from './icon/Html.astro';
+import Django from './icon/Django.astro';
+import LinkButton from './LinkButton.astro';
+import SQLite from './icon/Sqlite.astro';
 
 const TAGS = {
-  Django: { name: "Django", class: "bg-gray-500 text-white", icon: Django },
-  HTML: { name: "HTML", class: "bg-orange-400 text-white", icon: HTML },
-  JS: { name: "JavaScript", class: "bg-blue-500 text-white", icon: JS },
-  Supabase: { name: "Supabase", class: "bg-green-200 text-green-700", icon: Supabase },
-  NextJS: { name: "NextJS", class: "bg-gray-500 text-white", icon: NextJS },
-  Typescript: { name: "Typescript", class: "bg-blue-700 text-white", icon: Typescript },
-  React: { name: "React", class: "bg-blue-500 text-white", icon: React },
-  CSS: { name: "CSS", class: "bg-blue-900 text-white", icon: CSS },
-  NodeJS: { name: "NodeJS", class: "bg-green-700 text-white", icon: Node },
-  ExpressJS: { name: "ExpressJS", class: "bg-gray-500 text-white", icon: ExpressJS },
-  Python: { name: "Python", class: "bg-yellow-600 text-white", icon: Python },
-  TailwindCSS: { name: "TailwindCSS", class: "bg-gray-200 text-black", icon: Tailwind },
-  SQLite: { name: "SQLite", class: "bg-blue-200 text-black", icon: SQLite },
+  Django: { name: 'Django', class: 'bg-gray-500 text-white', icon: Django },
+  HTML: { name: 'HTML', class: 'bg-orange-400 text-white', icon: HTML },
+  JS: { name: 'JavaScript', class: 'bg-blue-500 text-white', icon: JS },
+  Supabase: { name: 'Supabase', class: 'bg-green-200 text-green-700', icon: Supabase },
+  NextJS: { name: 'NextJS', class: 'bg-gray-500 text-white', icon: NextJS },
+  Typescript: { name: 'Typescript', class: 'bg-blue-700 text-white', icon: Typescript },
+  React: { name: 'React', class: 'bg-blue-500 text-white', icon: React },
+  CSS: { name: 'CSS', class: 'bg-blue-900 text-white', icon: CSS },
+  NodeJS: { name: 'NodeJS', class: 'bg-green-700 text-white', icon: Node },
+  ExpressJS: { name: 'ExpressJS', class: 'bg-gray-500 text-white', icon: ExpressJS },
+  Python: { name: 'Python', class: 'bg-yellow-600 text-white', icon: Python },
+  TailwindCSS: { name: 'TailwindCSS', class: 'bg-gray-200 text-black', icon: Tailwind },
+  SQLite: { name: 'SQLite', class: 'bg-blue-200 text-black', icon: SQLite },
 };
 
 const PROJECTS = [
-{
-    title: "🎬 Recomendador de Películas",
+  {
+    title: '🎬 Recomendador de Películas',
     description:
-      "Aplicación web para buscar películas con filtros combinables, perfil de usuario, login seguro, recomendaciones y diseño responsive.",
-    github: "https://github.com/yamilabelen98/movie_recommender",
-    image: "/Img/Recomendador-de-Peliculas.webp",
+      'Aplicación web para buscar películas con filtros combinables, perfil de usuario, login seguro, recomendaciones y diseño responsive.',
+    github: 'https://github.com/yamilabelen98/movie_recommender',
+    demo: 'https://movie-recommender-qc0n.onrender.com',
+    image: '/Img/Recomendador-de-Peliculas.webp',
     tags: [TAGS.Python, TAGS.TailwindCSS, TAGS.HTML, TAGS.React, TAGS.SQLite],
   },
   {
-    title: "ChatBot E-Commerce",
+    title: 'ChatBot E-Commerce',
     description:
-      "Un chatbot asistente virtual para e-commerce desarrollado con Django, diseñado para proporcionar una experiencia de usuario amigable y elegante.",
-    github: "https://github.com/yamilabelen98/ChatBot",
-    image: "/Img/chatbot.webp",
+      'Un chatbot asistente virtual para e-commerce desarrollado con Django, diseñado para proporcionar una experiencia de usuario amigable y elegante.',
+    github: 'https://github.com/yamilabelen98/ChatBot',
+    image: '/Img/chatbot.webp',
     tags: [TAGS.Python, TAGS.JS, TAGS.CSS, TAGS.HTML, TAGS.Django],
   },
   {
-    title: "Clon X",
+    title: 'Clon X',
     description:
-      "Una app similar a Twitter donde los usuarios pueden iniciar sesión, publicar tweets, gestionar su perfil y explorar su feed en tiempo real.",
-    github: "https://github.com/yamilabelen98/Clon-X",
-    image: "/Img/clon_x.webp",
+      'Una app similar a Twitter donde los usuarios pueden iniciar sesión, publicar tweets, gestionar su perfil y explorar su feed en tiempo real.',
+    github: 'https://github.com/yamilabelen98/Clon-X',
+    image: '/Img/clon_x.webp',
     tags: [TAGS.Typescript, TAGS.TailwindCSS, TAGS.React, TAGS.NextJS, TAGS.Supabase],
   },
   {
-    title: "Tetris Game",
+    title: 'Tetris Game',
     description:
-      "Desarrollado en Python con Pygame. Incluye controles de movimiento, rotación, música de fondo y un sistema de puntuación.",
-    github: "https://github.com/yamilabelen98/GAME_TETRIS",
-    image: "/Img/tetris.webp",
+      'Desarrollado en Python con Pygame. Incluye controles de movimiento, rotación, música de fondo y un sistema de puntuación.',
+    github: 'https://github.com/yamilabelen98/GAME_TETRIS',
+    image: '/Img/tetris.webp',
     tags: [TAGS.Python],
   },
   {
-    title: "Proyecto Bot Discord",
+    title: 'Proyecto Bot Discord',
     description:
-      "Un bot de Discord con comandos personalizados, moderación y respuestas automáticas, optimizado para eficiencia.",
-    github: "https://github.com/yamilabelen98/BotDiscord",
-    image: "/Img/bot.webp",
+      'Un bot de Discord con comandos personalizados, moderación y respuestas automáticas, optimizado para eficiencia.',
+    github: 'https://github.com/yamilabelen98/BotDiscord',
+    image: '/Img/bot.webp',
     tags: [TAGS.JS, TAGS.ExpressJS, TAGS.NodeJS],
   },
   {
-    title: "Proyecto Individual VideoGame",
+    title: 'Proyecto Individual VideoGame',
     description:
-      "SPA interactiva sobre videojuegos. Utiliza React en el Front-End, Redux para estado global y una API propia en Node.js y ExpressJS.",
-    github: "https://github.com/yamilabelen98/Proyecto-Individual-VideoGame",
-    image: "/Img/videogame.webp",
+      'SPA interactiva sobre videojuegos. Utiliza React en el Front-End, Redux para estado global y una API propia en Node.js y ExpressJS.',
+    github: 'https://github.com/yamilabelen98/Proyecto-Individual-VideoGame',
+    image: '/Img/videogame.webp',
     tags: [TAGS.JS, TAGS.CSS, TAGS.ExpressJS, TAGS.NodeJS],
   },
 ];
 ---
 
 <div class="flex flex-col gap-y-16">
-  {PROJECTS.map(({ image, title, description, tags, github }, index) => (
-    <article 
-      class={`bg-[#f5b7cd] dark:bg-gray-700 rounded-lg shadow-lg p-6 border-2 border-transparent transition-all duration-300 
+  {
+    PROJECTS.map(({ image, title, description, tags, github, demo }, index) => (
+      <article
+        class={`bg-[#f5b7cd] dark:bg-gray-700 rounded-lg shadow-lg p-6 border-2 border-transparent transition-all duration-300 
               hover:scale-105 hover:shadow-[0px_0px_20px_5px_#ed6195] dark:hover:shadow-[0px_0px_20px_5px_#eb00bc] 
-              ${index % 2 !== 0 ? "lg:translate-y-4" : ""}`}
-    >
-      <div class="flex flex-col md:flex-row gap-6">
-        
-        <!-- Imagen del Proyecto -->
-        <div class="w-full md:w-1/2">
-          <img
-            alt="Proyecto {title}"
-            class="object-cover object-top w-full h-56 rounded-md transition-transform duration-500 md:group-hover:scale-105"
-            loading="lazy"
-            src={image}
-          />
-        </div>
-
-        <!-- Detalles del Proyecto -->
-        <div class="w-full md:w-1/2 md:max-w-lg">
-          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-            {title}
-          </h3>
-          
-          <div class="mt-2 text-gray-700 dark:text-gray-400">
-            {description}
+              ${index % 2 !== 0 ? 'lg:translate-y-4' : ''}`}
+      >
+        <div class="flex flex-col md:flex-row gap-6">
+          <div class="w-full md:w-1/2">
+            <img
+              alt="Proyecto {title}"
+              class="object-cover object-top w-full h-56 rounded-md transition-transform duration-500 md:group-hover:scale-105"
+              loading="lazy"
+              src={image}
+            />
           </div>
 
-          <!-- Tecnologías -->
-          <ul class="flex flex-wrap gap-2 mt-3">
-            {tags.map((tag) => (
-              <li class="flex flex-row items-center">
-                <span class={`flex items-center rounded-full text-xs px-3 py-1 ${tag.class}`}>
-                  <tag.icon class="size-4 mr-1" />
-                  {tag.name}
-                </span>
-              </li>
-            ))}
-          </ul>
+          <div class="w-full md:w-1/2 md:max-w-lg">
+            <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">{title}</h3>
 
-          <!-- Botón GitHub -->
-          <footer class="flex items-center mt-4">
-            {github && (
-              <LinkButton href={github} class="bg-gray-800 text-white font-semibold px-4 py-2 rounded-md hover:bg-black transition-colors">
-                <GitHub class="size-5" />
-                Código en GitHub
-              </LinkButton>
-            )}
-          </footer>
+            <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
+
+            <ul class="flex flex-wrap gap-2 mt-3">
+              {tags.map((tag) => (
+                <li class="flex flex-row items-center">
+                  <span class={`flex items-center rounded-full text-xs px-3 py-1 ${tag.class}`}>
+                    <tag.icon class="size-4 mr-1" />
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <footer class="flex items-center mt-4 gap-2">
+              {github && (
+                <LinkButton
+                  target="_blank"
+                  href={github}
+                  class="bg-gray-800 text-white font-semibold px-4 py-2 rounded-md hover:bg-black transition-colors"
+                >
+                  <GitHub class="size-5" />
+                  Código en GitHub
+                </LinkButton>
+              )}
+              {demo && (
+                <LinkButton
+                  target="_blank"
+                  href={demo}
+                  class="bg-pink-600 text-white font-semibold px-4 py-2 rounded-md hover:bg-pink-700 transition-colors"
+                >
+                  🚀 Probar Proyecto
+                </LinkButton>
+              )}
+            </footer>
+          </div>
         </div>
-      </div>
-    </article>
-  ))}
+      </article>
+    ))
+  }
 </div>
