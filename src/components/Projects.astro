@@ -14,8 +14,11 @@ import HTML from './icon/Html.astro';
 import Django from './icon/Django.astro';
 import LinkButton from './LinkButton.astro';
 import SQLite from './icon/Sqlite.astro';
+import Docker from './icon/Docker.astro';
+import MongoDB from './icon/MongoDB.astro';
 
 const TAGS = {
+  Docker: { name: 'Docker', class: 'bg-blue-200 text-black', icon: Docker },
   Django: { name: 'Django', class: 'bg-gray-500 text-white', icon: Django },
   HTML: { name: 'HTML', class: 'bg-orange-400 text-white', icon: HTML },
   JS: { name: 'JavaScript', class: 'bg-blue-500 text-white', icon: JS },
@@ -29,9 +32,26 @@ const TAGS = {
   Python: { name: 'Python', class: 'bg-yellow-600 text-white', icon: Python },
   TailwindCSS: { name: 'TailwindCSS', class: 'bg-gray-200 text-black', icon: Tailwind },
   SQLite: { name: 'SQLite', class: 'bg-blue-200 text-black', icon: SQLite },
+  MongoDB: { name: 'Mongo', class: 'bg-gray-500 text-white', icon: MongoDB },
 };
 
 const PROJECTS = [
+  {
+    title: '🌸 Fintech Subscriptions Platform',
+    description:
+      'Plataforma de suscripciones tipo fintech. Incluye autenticación con JWT, integración simulada con Stripe, emails automáticos y una interfaz con Tailwind CSS.',
+    github: 'https://github.com/yamilabelen98/FintechSubscriptions',
+    image: '/Img/Fintech.webp',
+    tags: [
+      TAGS.Docker,
+      TAGS.NodeJS,
+      TAGS.ExpressJS,
+      TAGS.React,
+      TAGS.NextJS,
+      TAGS.TailwindCSS,
+      TAGS.MongoDB,
+    ],
+  },
   {
     title: '🎬 Recomendador de Películas',
     description:
