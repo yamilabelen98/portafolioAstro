@@ -1,11 +1,12 @@
 ---
-const personalImageAlt = 'Yamila De Olivera';
+import { Image } from 'astro:assets';
 import Badge from '../components/Badge.astro';
 import LinkedInIcon from '../components/icon/Linkedin.astro';
 import MailIcon from '../components/icon/Mail.astro';
 import Certificado from '../components/icon/Certificado.astro';
 import SocialPill from '../components/SocialPill.astro';
 import Arrow from '../components/icon/Arrow.astro';
+import { profile } from '../data/profile';
 ---
 
 <div class="max-w-xl">
@@ -17,14 +18,18 @@ import Arrow from '../components/icon/Arrow.astro';
         class="absolute inset-0 animate-spin bg-[conic-gradient(from_90deg_at_50%_50%,#ed6195_0%,#00ffff_50%,#ed6195_100%)]
 dark:bg-[conic-gradient(from_90deg_at_50%_50%,#eb00bc_0%,#00d2ff_50%,#eb00bc_100%)]"
       ></span>
-      <img
+      <Image
         class="relative rounded-full shadow-lg w-16 h-16"
         src="/Img/photo.webp"
-        alt={personalImageAlt}
+        alt={profile.imageAlt}
+        width={64}
+        height={64}
+        loading="eager"
+        format="webp"
       />
     </span>
     <a
-      href="/CV-Yamila De Olivera - Full Stack Developer.pdf"
+      href={profile.cvPath}
       target="_blank"
       rel="noopener"
       class="flex items-center transition md:justify-center md:hover:scale-105"
@@ -41,33 +46,28 @@ dark:bg-[conic-gradient(from_90deg_at_50%_50%,#eb00bc_0%,#00d2ff_50%,#eb00bc_100
            dark:bg-[linear-gradient(110deg,#eb00bc,45%,#00d2ff,55%,#eb00bc)]
            bg-[length:250%_100%] bg-clip-text text-xl text-transparent"
   >
-    Desarrolladora Full Stack | React | Node.js | Python | QA Testing </span>
+    {profile.role}
+  </span>
   <p
     class="mt-6 text-xl text-black dark:[&>strong]:text-[#eb00bc] [&>strong]:text-[#ed6195] [&>strong]:font-semibold dark:text-gray-100"
   >
-    En busca de oportunidades para desenpeñar mi experiencia aprendida. <strong
-      >Estudiante de Ingenieria Informática. Con un año de experiencia Freelance</strong
-    >, de Buenos Aires, Argentina. Especializada en hacer sitios web únicos.
+    {profile.summary} <strong>{profile.summaryHighlight}</strong>, {profile.location}. {profile.summaryClosing}
   </p>
   <nav class="flex flex-wrap gap-4 mt-8">
-    <SocialPill href="mailto:yami40521@gmail.com">
+    <SocialPill href={profile.links.email}>
       <MailIcon class="size-5" />
       Contáctame
     </SocialPill>
-    <SocialPill href="https://www.linkedin.com/in/yamila-de-olivera/">
+    <SocialPill href={profile.links.linkedin}>
       <LinkedInIcon class="size-4" />
       LinkedIn
     </SocialPill>
-    <SocialPill
-      href="https://certificates.soyhenry.com/new-cert?id=e04e1bfa344d77f472180b7f723871428ec5d2a53a3c1571fe0e056404e983a1"
-    >
+    <SocialPill href={profile.links.henryCertificate}>
       <Certificado class="size-5" />
       Certificado Henry
     </SocialPill>
-    <SocialPill
-      href="/Img/Certificado Testing QA Manual .png"
-    >
-    <Certificado class="size-5" />
+    <SocialPill href={profile.links.qaCertificate}>
+      <Certificado class="size-5" />
       Certificado QA Testing
     </SocialPill>
   </nav>

@@ -11,6 +11,8 @@ interface Props {
 }
 
 const { description, title } = Astro.props;
+const siteUrl = 'https://master--portafolio-yamila-de-olivera.netlify.app/';
+const ogImage = `${siteUrl}Img/portafolio.png`;
 ---
 
 <!doctype html>
@@ -20,10 +22,7 @@ const { description, title } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- SEO Básico -->
-    <meta
-      name="description"
-      content="Portafolio de Yamila De Olivera, Full Stack Developer especializado en React, Next.js y Node.js."
-    />
+    <meta name="description" content={description} />
     <meta
       name="keywords"
       content="Full Stack Developer, React, Next.js, Node.js, Django, Python, Portafolio, Desarrollo Web"
@@ -31,16 +30,10 @@ const { description, title } = Astro.props;
     <meta name="author" content="Yamila De Olivera" />
 
     <!-- Open Graph (para compartir en redes sociales como LinkedIn) -->
-    <meta property="og:title" content="Portafolio - Yamila De Olivera" />
-    <meta
-      property="og:description"
-      content="Explora mis proyectos y habilidades en desarrollo web."
-    />
-    <meta
-      property="og:image"
-      content="https://master--portafolio-yamila-de-olivera.netlify.app/Img/portafolio.png"
-    />
-    <meta property="og:url" content="https://master--portafolio-yamila-de-olivera.netlify.app/" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:url" content={siteUrl} />
     <meta property="og:type" content="website" />
 
     <!-- Icono de la Web -->
@@ -53,26 +46,6 @@ const { description, title } = Astro.props;
 
     <!-- Animaciones de Página -->
     <ClientRouter />
-
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- SEO y Open Graph -->
-    <meta
-      name="description"
-      content="Portafolio de Yamila De Olivera, Full Stack Developer especializado en React, Next.js y Node.js."
-    />
-    <meta property="og:title" content="Portafolio - Yamila De Olivera" />
-    <meta
-      property="og:description"
-      content="Explora mis proyectos y habilidades en desarrollo web."
-    />
-    <meta
-      property="og:image"
-      content="https://master--portafolio-yamila-de-olivera.netlify.app/Img/portafolio.png"
-    />
-    <meta property="og:url" content="https://master--portafolio-yamila-de-olivera.netlify.app/" />
-    <meta property="og:type" content="website" />
     <!-- Google tag (gtag.js) para Astro -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-C952QZT3MT"></script>
 

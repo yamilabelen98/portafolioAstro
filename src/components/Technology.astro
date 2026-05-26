@@ -88,8 +88,8 @@ const STACK_SECTIONS = [
 </p>
 
 <!-- Sección de Tecnologías -->
-<section class="flex items-start justify-start mt-6">
-  <div class="grid lg:grid-cols-2 lg:grid-rows-2 gap-8 lg:place-content-start">
+<section class="flex items-start justify-center mt-6">
+  <div class="grid lg:grid-cols-2 lg:grid-rows-2 gap-8">
     {
       STACK_SECTIONS.map((section, index) => (
         <div
@@ -101,11 +101,11 @@ const STACK_SECTIONS = [
             {section.title}
           </h3>
 
-          <ul class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-3">
+          <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-3 justify-items-center">
             {section.items.map((skill) => (
               <li class="w-28 h-24 rounded-2xl flex flex-col justify-center items-center transition-transform duration-300 hover:scale-105 hover:shadow-md cursor-pointer p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 hover:border-[#ed6195] dark:hover:border-[#eb00bc]">
-                <skill.icon class="size-12 mb-2" />
-                <span class="text-sm font-semibold text-center">{skill.name}</span>
+                <skill.icon class="tech-skill-icon size-12 mb-2" />
+                <span class="text-sm font-semibold text-center text-gray-900 dark:text-white">{skill.name}</span>
               </li>
             ))}
           </ul>
@@ -114,3 +114,36 @@ const STACK_SECTIONS = [
     }
   </div>
 </section>
+
+<style is:global>
+  html:not(.dark) .tech-skill-icon {
+    color: rgb(31 41 55);
+  }
+
+  html:not(.dark) .tech-skill-icon[fill='#fff'],
+  html:not(.dark) .tech-skill-icon[fill='#FFF'],
+  html:not(.dark) .tech-skill-icon[fill='white'],
+  html:not(.dark) .tech-skill-icon[fill='White'],
+  html:not(.dark) .tech-skill-icon[fill='#ffffff'],
+  html:not(.dark) .tech-skill-icon[fill='#FFFFFF'] {
+    fill: rgb(31 41 55);
+  }
+
+  html:not(.dark) .tech-skill-icon [fill='#fff'],
+  html:not(.dark) .tech-skill-icon [fill='#FFF'],
+  html:not(.dark) .tech-skill-icon [fill='white'],
+  html:not(.dark) .tech-skill-icon [fill='White'],
+  html:not(.dark) .tech-skill-icon [fill='#ffffff'],
+  html:not(.dark) .tech-skill-icon [fill='#FFFFFF'] {
+    fill: rgb(55 65 81);
+  }
+
+  html:not(.dark) .tech-skill-icon [stroke='#fff'],
+  html:not(.dark) .tech-skill-icon [stroke='#FFF'],
+  html:not(.dark) .tech-skill-icon [stroke='white'],
+  html:not(.dark) .tech-skill-icon [stroke='White'],
+  html:not(.dark) .tech-skill-icon [stroke='#ffffff'],
+  html:not(.dark) .tech-skill-icon [stroke='#FFFFFF'] {
+    stroke: rgb(55 65 81);
+  }
+</style>
